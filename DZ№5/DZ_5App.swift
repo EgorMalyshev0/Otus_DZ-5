@@ -12,6 +12,7 @@ struct DZ_5App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(Router())
         }
     }
 }
