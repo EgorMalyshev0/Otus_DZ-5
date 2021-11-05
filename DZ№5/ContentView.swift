@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var router: Router
+    @EnvironmentObject var suffixViewModel: SuffixViewModel
 
     var body: some View {
         TabView(selection: $router.selection) {
@@ -18,19 +19,22 @@ struct ContentView: View {
                     Text("First")
                     Image(systemName: "1.circle")
                 }
-                .tag(0)
+                .tag(TabType.first.rawValue)
+                .environmentObject(suffixViewModel)
+                .environmentObject(router)
             SecondScreen()
                 .tabItem {
                     Text("Second")
                     Image(systemName: "2.circle")
                 }
-                .tag(1)
+                .tag(TabType.second.rawValue)
+                .environmentObject(suffixViewModel)
             ThirdScreen()
                 .tabItem {
                     Text("Third")
                     Image(systemName: "3.circle")
                 }
-                .tag(2)
+                .tag(TabType.third.rawValue)
         }
     }
 }

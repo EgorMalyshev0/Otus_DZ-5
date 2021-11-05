@@ -1,5 +1,5 @@
 //
-//  SecondScreen.swift
+//  ThirdScreen.swift
 //  DZ№5
 //
 //  Created by Egor Malyshev on 04.11.2021.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct SecondScreen: View {
+struct ThirdScreen: View {
     var body: some View {
-        Text("Second screen")
+        Text("Just Third Screen")
     }
 }
 
-struct SecondScreen_Previews: PreviewProvider {
+struct ThirdScreen_Previews: PreviewProvider {
     static var previews: some View {
-        SecondScreen()
+        ThirdScreen()
     }
 }
